@@ -6,9 +6,9 @@ type Props = {
   offers: OffersReview[];
 };
 
-function App({countOfAvailablePlaces, offers}:Props): JSX.Element {
+function App({countOfAvailablePlaces, offers}: Props): JSX.Element {
   return (
-    <MainPage countOfAvailablePlaces = {countOfAvailablePlaces} offers={offers}/>
+    <MainPage countOfAvailablePlaces = {countOfAvailablePlaces} offers = {offers}/>
   );
 }
 

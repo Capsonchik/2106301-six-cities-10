@@ -4,7 +4,7 @@ import { useState } from 'react';
 //   onChange: (e: React.FormEvent<HTMLTextAreaElement>) => void;
 // }
 
-function PropertyForm() {
+function OfferReviewForm() {
   const [textAreaValue, setTextAreaValue] = useState<string>();
 
   const changeTextAreaHendler = (event: React.FormEvent<HTMLTextAreaElement>) => {
@@ -70,4 +70,4 @@ function PropertyForm() {
   );
 }
 
-export default PropertyForm;
+export default OfferReviewForm;

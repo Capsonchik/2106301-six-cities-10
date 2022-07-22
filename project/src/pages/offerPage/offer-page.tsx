@@ -1,8 +1,8 @@
 import Header from '../../components/header/header';
-import PropertyForm from '../../components/propertyForm/property-form';
+import OfferReviewForm from '../../components/offerReviewForm/offer-review-form';
 
 
-function PropertyPage (): JSX.Element {
+function OffersPage (): JSX.Element {
 
   return(
     <div className="page">
@@ -153,7 +153,7 @@ function PropertyPage (): JSX.Element {
                     </div>
                   </li>
                 </ul>
-                <PropertyForm/>
+                <OfferReviewForm/>
               </section>
             </div>
           </div>
@@ -269,4 +269,4 @@ function PropertyPage (): JSX.Element {
   );
 }
 
-export default PropertyPage;
+export default OffersPage;
