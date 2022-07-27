@@ -8,7 +8,7 @@ type Props = {
 
 function App({countOfAvailablePlaces, offers}: Props): JSX.Element {
   return (
-    <MainPage countOfAvailablePlaces = {countOfAvailablePlaces} offers = {offers}/>
+    <MainPage countOfAvailablePlaces={countOfAvailablePlaces} offers={offers}/>
   );
 }
 
