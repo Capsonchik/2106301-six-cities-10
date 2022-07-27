@@ -8,12 +8,12 @@ type favoritesProps = {
 }
 
 function FavoritesList({ offers }: favoritesProps) {
-  const a:string[] = [];
-  offers.forEach((offer) => a.push(offer.city));
-  const b = new Set(a);
-  const c = Array.from(b);
+  const sitiesArray:string[] = [];
+  offers.forEach((offer) => sitiesArray.push(offer.city));
+  const onlyCitiesNames = new Set(sitiesArray);
+  const uniqCitiesArray = Array.from(onlyCitiesNames);
 
-  const renderCities = c.map((city) => {
+  const renderCities = uniqCitiesArray.map((city) => {
     const filteredOffers = offers.filter((offer) => offer.city === city);
 
     return (
