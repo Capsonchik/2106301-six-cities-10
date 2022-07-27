@@ -1,5 +1,6 @@
 import Amsterdam from '../../components/favoritesCitys/amsterdam/amsterdam';
 import Berlin from '../../components/favoritesCitys/berlin/berlin';
+import FavoritesList from '../../components/favoritesList/favorites-list';
 import Footer from '../../components/footer/footer';
 import Header from '../../components/header/header';
 import { OffersReview } from '../../types/offers';
@@ -20,6 +21,7 @@ function FavoritesPage({offers}: favoritesPageProps) {
             <ul className="favorites__list">
               <Amsterdam offers={offers}/>
               <Berlin offers={offers}/>
+              <FavoritesList offers={offers}/>
             </ul>
           </section>
         </div>
