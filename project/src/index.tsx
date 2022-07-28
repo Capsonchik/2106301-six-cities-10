@@ -7,6 +7,8 @@ import FavoritesPage from './pages/favoritesPage/favorites-page';
 import LoginPage from './pages/loginPage/login-page';
 import PrivateRoute from './components/privateRoute/private-route';
 import { AutorizationStatus } from './consts';
+import { offers } from './mocks/offers';
+import OffersPage from './pages/offerPage/offer-page';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -17,19 +19,19 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App countOfAvailablePlaces={COUNT_OF_AVAILABLE_PLACES}/>}/>
+        <Route path='/' element={<App countOfAvailablePlaces={COUNT_OF_AVAILABLE_PLACES} offers={offers}/>}/>
         <Route
           path='/favorites'
           element={
             <PrivateRoute
-              autorizationStatus={AutorizationStatus.NoAuth}
+              autorizationStatus={AutorizationStatus.Auth}
             >
-              <FavoritesPage/>
+              <FavoritesPage offers={offers}/>
             </PrivateRoute>
           }
         />
         <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/offer/:id' />
+        <Route path='/offer/:id' element={<OffersPage/>} />
         <Route path='*' element={<Page404/>}/>
       </Routes>
     </BrowserRouter>

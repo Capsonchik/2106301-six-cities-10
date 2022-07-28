@@ -1,12 +1,14 @@
 import MainPage from '../../pages/mainPage/main-page';
+import { OffersReview } from '../../types/offers';
 
 type Props = {
   countOfAvailablePlaces: number;
+  offers: OffersReview[];
 };
 
-function App({countOfAvailablePlaces}:Props): JSX.Element {
+function App({countOfAvailablePlaces, offers}: Props): JSX.Element {
   return (
-    <MainPage countOfAvailablePlaces = {countOfAvailablePlaces}/>
+    <MainPage countOfAvailablePlaces={countOfAvailablePlaces} offers={offers}/>
   );
 }
 
