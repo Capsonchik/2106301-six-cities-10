@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { OffersReview } from '../../types/offers';
 
 type mapProps = {
@@ -5,8 +6,13 @@ type mapProps = {
 };
 
 function Map({offers}:mapProps) {
+  const mapRef = useRef(null);
+  const location = [];
+  offers.forEach((offer) => location.push(offer.location));
+
+
   return (
-    <div>
+    <div style={{ height: '500px'}} ref={mapRef}>
       test
     </div>
   );
