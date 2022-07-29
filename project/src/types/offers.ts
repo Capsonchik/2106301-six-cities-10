@@ -5,5 +5,10 @@ export type OffersReview = {
   mainPhoto: string,
   rating: number,
   price: number,
-  city: string
+  city: string,
+  location: {
+    latitude: number
+    longitude: number
+    zoom: number
+    }
 };
