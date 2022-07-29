@@ -7,8 +7,7 @@ export type OffersReview = {
   price: number,
   city: string,
   location: {
-    latitude: number
+    latitude: number,
     longitude: number
-    zoom: number
     }
 };

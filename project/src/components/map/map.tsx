@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import useMap from '../../hooks/useMap';
 import { OffersReview } from '../../types/offers';
 
 type mapProps = {
@@ -13,6 +14,8 @@ function Map({offers}:mapProps) {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const map = useMap(mapRef, location);
+
+  
 
 
   return (
