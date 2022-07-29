@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Header from '../../components/header/header';
+import Map from '../../components/map/map';
 import SentensCards from '../../components/sentensCard/sentens-card';
 import { OffersReview } from '../../types/offers';
 
@@ -110,7 +111,9 @@ function MainPage({countOfAvailablePlaces, offers}: Props) {
               </div>
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <section className="cities__map map">
+                <Map offers={offers}/>
+              </section>
             </div>
           </div>
         </div>
