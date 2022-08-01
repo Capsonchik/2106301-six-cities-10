@@ -11,3 +11,10 @@ export type OffersReview = {
     longitude: number
     }
 };
+
+export type City = {
+  title: string,
+  lat: number,
+  lng: number,
+  zoom: number
+}

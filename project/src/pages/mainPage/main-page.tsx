@@ -2,14 +2,15 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/header/header';
 import Map from '../../components/map/map';
 import SentensCards from '../../components/sentensCard/sentens-card';
-import { OffersReview } from '../../types/offers';
+import { City, OffersReview } from '../../types/offers';
 
 type Props = {
   countOfAvailablePlaces: number;
   offers: OffersReview[];
+  city: City;
 };
 
-function MainPage({countOfAvailablePlaces, offers}: Props) {
+function MainPage({countOfAvailablePlaces, offers, city}: Props) {
   return (
     <div className="page page--gray page--main">
       <Header/>
@@ -112,7 +113,7 @@ function MainPage({countOfAvailablePlaces, offers}: Props) {
             </section>
             <div className="cities__right-section">
               <section className="cities__map map">
-                <Map offers={offers}/>
+                <Map offers={offers} city={city}/>
               </section>
             </div>
           </div>
