@@ -9,6 +9,7 @@ import PrivateRoute from './components/privateRoute/private-route';
 import { AutorizationStatus } from './consts';
 import { offers } from './mocks/offers';
 import OffersPage from './pages/offerPage/offer-page';
+import { CITY } from './mocks/city';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
@@ -19,7 +20,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App countOfAvailablePlaces={COUNT_OF_AVAILABLE_PLACES} offers={offers}/>}/>
+        <Route path='/' element={<App countOfAvailablePlaces={COUNT_OF_AVAILABLE_PLACES} offers={offers} city={CITY}/>}/>
         <Route
           path='/favorites'
           element={
